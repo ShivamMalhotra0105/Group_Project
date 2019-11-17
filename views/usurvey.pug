@@ -1,1 +1,52 @@
 extends layout
+
+block content
+  h3 Survey Questions
+  form(method='post' action='index.pug')
+  | Check the answer to each multiple-coice question, and click on the "Send Form" button to submit the information.
+  p
+    | 1. Do you have a Smartphone?
+    br
+    input(type='radio', name='1.Do you have a Smartphone?', value='Yes')
+    | Yes
+    br
+    input(type='radio', name='1.Do you have a Smartphone?', value='No')
+    | No
+    br
+
+    p
+    | 2. Which smartphone brand are you currently using?
+    br
+    input(type='radio', name='2. Which smartphone brand are you currently using?', value='Apple')
+    | Apple
+    br
+    input(type='radio', name='2. Which smartphone brand are you currently using?', value='Samsung')
+    | Samsung
+    br
+    input(type='radio', name='2. Which smartphone brand are you currently using?', value='Both')
+    | Both
+    br
+    input(type='radio', name='2. Which smartphone brand are you currently using?', value='None')
+    | None
+    br
+    p
+    | 3. What are the factors that influence the purchase of your smartphone?
+    br
+    input(type='radio', name='3. What are the factors that influence the purchase of your smartphone?', value='Logo Of Brand')
+    | Logo Of Brand
+    br
+    input(type='radio', name='3. What are the factors that influence the purchase of your smartphone?', value='Design')
+    | Design
+    br
+    input(type='radio', name='3. What are the factors that influence the purchase of your smartphone?', value='Price')
+    | Price
+    br
+    input(type='radio', name='3. What are the factors that influence the purchase of your smartphone?', value='Function')
+    | Function
+    br
+    br
+    br
+    br
+    br
+    input(type='submit', value='Submit')
+

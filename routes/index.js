@@ -27,6 +27,4 @@ router.get('/usurvey', function(req, res, next) {
 });
 
 
-
-
 module.exports = router;
