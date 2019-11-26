@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 var User = require('./models/user');
 var mongoose = require('mongoose');
 var passport = require('passport');
+var flash = require('flash');
 
 //connection string mongodb
 mongoose.connect('mongodb+srv://portfolio:portfolio@cluster0-eqeqx.mongodb.net/test?retryWrites=true&w=majority',
@@ -40,9 +41,30 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({ secret : 'unicorn', resave : false,saveUninitialized : true}));
 
 
+app.use(flash());
+
+
 //passport init
 app.use(passport.initialize());
 app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+app.use((req, res, next) => {
+  res.locals.userLoggedIn = req.isAuthenticated();
+  res.locals.user = req.user;
+
+  if (req.isAuthenticated()) {
+    res.locals.role = req.user.role;
+  } else {
+    res.locals.role = null;
+  }
+
+  next();
+});
 
 
 app.use('/', indexRouter);
