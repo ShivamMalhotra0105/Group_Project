@@ -2,51 +2,51 @@ extends layout
 
 block content
   h3 Survey Questions
-  form(method='post' action='index.pug')
+  form#survey-form(method='post' action='/submit')
   | Check the answer to each multiple-coice question, and click on the "Send Form" button to submit the information.
   p
     | 1. Do you have a Smartphone?
     br
-    input(type='radio', name='1.Do you have a Smartphone?', value='Yes')
+    input(type='radio', name='q1', value='Yes')
     | Yes
     br
-    input(type='radio', name='1.Do you have a Smartphone?', value='No')
+    input(type='radio', name='q1', value='No')
     | No
     br
 
     p
     | 2. Which smartphone brand are you currently using?
     br
-    input(type='radio', name='2. Which smartphone brand are you currently using?', value='Apple')
+    input(type='radio', name='q2', value='Apple')
     | Apple
     br
-    input(type='radio', name='2. Which smartphone brand are you currently using?', value='Samsung')
+    input(type='radio', name='q2', value='Samsung')
     | Samsung
     br
-    input(type='radio', name='2. Which smartphone brand are you currently using?', value='Both')
+    input(type='radio', name='q2', value='Both')
     | Both
     br
-    input(type='radio', name='2. Which smartphone brand are you currently using?', value='None')
+    input(type='radio', name='q2', value='None')
     | None
     br
     p
     | 3. What are the factors that influence the purchase of your smartphone?
     br
-    input(type='radio', name='3. What are the factors that influence the purchase of your smartphone?', value='Logo Of Brand')
+    input(type='radio', name='q3', value='Logo Of Brand')
     | Logo Of Brand
     br
-    input(type='radio', name='3. What are the factors that influence the purchase of your smartphone?', value='Design')
+    input(type='radio', name='q3', value='Design')
     | Design
     br
-    input(type='radio', name='3. What are the factors that influence the purchase of your smartphone?', value='Price')
+    input(type='radio', name='q3', value='Price')
     | Price
     br
-    input(type='radio', name='3. What are the factors that influence the purchase of your smartphone?', value='Function')
+    input(type='radio', name='q3', value='Function')
     | Function
     br
     br
     br
     br
     br
-    input(type='submit', value='Submit')
+    input(type='submit', value='Submit', form="survey-form")
 

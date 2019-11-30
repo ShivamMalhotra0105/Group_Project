@@ -38,7 +38,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({ secret : 'unicorn', resave : false,saveUninitialized : true}));
+app.use(session({ secret : 'bat', resave : false,saveUninitialized : true}));
 
 
 app.use(flash());

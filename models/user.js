@@ -5,10 +5,6 @@ const passportLocalMongoose = require('passport-local-mongoose');
 
 // User Schema
 const userSchema = new Schema({
-  name:{
-    type: String,
-    required: true
-  },
   email:{
     type: String,
     required: true
@@ -23,10 +19,14 @@ const userSchema = new Schema({
   }
 });
 
+
+
 userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(findorcreate);
 
 
 const user = mongoose.model('User', userSchema);
 
- module.exports = user
+
+
+ module.exports = user;

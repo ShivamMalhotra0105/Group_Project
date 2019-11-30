@@ -13,6 +13,6 @@ exports.authRequire = (req, res, next) => {
       return next();
     }
   
-    return next(new Error('You have to log in first'));
+    return next(new Error('login first'));
   };
   
