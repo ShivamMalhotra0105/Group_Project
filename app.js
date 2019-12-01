@@ -18,7 +18,7 @@ var passport = require('passport');
 var flash = require('flash');
 
 //connection string mongodb
-mongoose.connect('mongodb+srv://groupproject:groupproject@cluster0-ge8jq.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://portfolio:portfolio@cluster0-eqeqx.mongodb.net/portfolio?retryWrites=true&w=majority',
  {useNewUrlParser: true, useUnifiedTopology: true}
  );
 

@@ -1,0 +1,15 @@
+h3{
+    padding: 20px;
+      color:#cc0000;
+      text-align:center;
+    font: italic bold 50px/30px Georgia, serif;
+  }
+  
+  
+  form{
+    width: 60%; 
+    margin: 30px auto;
+    color: red; 
+    font: italic bold 20px/20px Lobster, serif;
+  }
+  

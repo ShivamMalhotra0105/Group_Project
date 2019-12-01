@@ -1,7 +1,8 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url('../images/purple1.jpg');
+  /*background-image: url('../images/pic1.jpg');*/
+  
 
 }
 
@@ -9,8 +10,11 @@ a {
   color: #00B7FF;
 }
 
+
+
 .footer {
   position: fixed;
+  padding-bottom: 15px;
   left: 0;
   bottom: 0;
   width: 100%;

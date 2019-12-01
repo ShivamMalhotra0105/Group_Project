@@ -8,6 +8,7 @@ extends layout
 
 block content
   h3 Survey Questions
+  link(rel='stylesheet', href='/stylesheets/usurvey.css')
   form#survey-form(method='post' action='/submit')
   | Check the answer to each multiple-coice question, and click on the "Send Form" button to submit the information.
   p

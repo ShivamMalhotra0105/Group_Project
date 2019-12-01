@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* Post response to the database. */
-router.post('/submit', (req, res) => {
+router.post('/submit', (req, res, next) => {
   const newquestion = new Question({
     questionOne: req.body.q1,
     questionTwo: req.body.q2,
@@ -25,8 +25,10 @@ router.post('/submit', (req, res) => {
 
    newquestion.save();
 
-   res.redirect('/')
-})
+   res.redirect('/');
+});
+
+
  
 /* GET about page. */
 router.get('/about', function(req, res, next) {

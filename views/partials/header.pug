@@ -4,25 +4,21 @@
 //- File Description: Navigation Bar  of the site 
 
 
-nav.navbar.navbar-expand-lg.navbar.bg-light
-  a.navbar-brand(href='../') Home
-  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-    span.navbar-toggler-icon
-  #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav.mr-auto
-      li.nav-item
-        a.nav-link(href='../usurvey') Take Survey
-      li.nav-item
-        a.nav-link(href='../about') About us
-      li.nav-item
-        a.nav-link(href='../privacy') Privacy
-
-    ul.nav.navbar-nav.navbar-right  
-    if isLoggedIn
-      li.nav-item
-        a.nav-link(href='../login') logout
-    else    
-      li.nav-item
-        a.nav-link(href='../login') Login
-      li.nav-item
-        a.nav-link(href='../register') Register
+.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+    a(class="navbar-brand", href="../")  Home
+    a(class="navbar-brand", href="../usurvey")  uSurvey
+    a(class="navbar-brand", href="../about")  About us
+    a(class="navbar-brand", href="../privacy")  Privacy
+    .navbar-collapse.collapse
+      ul.nav.navbar-nav.navbar-right
+        if login
+          
+          li
+            a(href="/logout") Signout
+        else
+          li
+            a(href="/login") Sigin 
+          li
+            a(href="/register") Signup
