@@ -1,3 +1,10 @@
+// File Name : Question.js
+// Author Name : Shivam, Egecan, Lovedeep, Sukhpreet
+// Website Name: Usurvey
+// File Description: Mongoose Schema File For Registration 
+
+
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const passportLocalMongoose = require('passport-local-mongoose');

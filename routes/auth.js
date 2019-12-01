@@ -1,14 +1,20 @@
+// File Name : Auth.js
+// Author Name : Shivam, Egecan, Lovedeep, Sukhpreet
+// Website Name: Usurvey
+// File Description: Authetication Routing File 
+
+
 const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
 const passport = require('passport');
 
-
+//Get Login Page 
 router.get('/login', (req, res, next) => {
   res.render('login', { error: req.flash('error') });
 });
 
-
+// Post Login Page
 router.post(
   '/login',
   passport.authenticate('local', {
@@ -18,12 +24,12 @@ router.post(
   })
 );
 
-
+// Get Registeration Page
 router.get('/register', (req, res, next) => {
   res.render('register', {});
 });
 
-
+// Post Registeration Page
 router.post('/register', (req, res, next) => {
   
   User.register(
@@ -44,7 +50,7 @@ router.post('/register', (req, res, next) => {
   );
 });
 
-
+// Get out from the login session i.e. Logout
 router.get('/logout', (req, res) => {
   req.session.destroy(err => {
     res.redirect('/login');

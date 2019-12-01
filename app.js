@@ -1,3 +1,9 @@
+// File Name : App.js
+// Author Name : Shivam, Egecan, Lovedeep, Sukhpreet
+// Website Name: Usurvey
+// File Description: Npm Express Packages Javascript File 
+
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -20,7 +26,7 @@ mongoose.connect('mongodb+srv://groupproject:groupproject@cluster0-ge8jq.mongodb
  db.on('error', () => console.log("Error Connecting to mongo db"));
  db.once('open', () => console.log("Connected to MongoDB"));
 
-
+// Three routers for the routes to work
 var authRouter = require('./routes/auth')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -38,9 +44,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Session use
 app.use(session({ secret : 'bat', resave : false,saveUninitialized : true}));
 
-
+//Flash use
 app.use(flash());
 
 
