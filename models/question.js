@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const findorcreate = require('find-or-create');
 const passportLocalMongoose = require('passport-local-mongoose');
+const findorcreate = require('mongoose-findorcreate');
 
 
 const questionSchema = new Schema({
@@ -23,8 +23,6 @@ const questionSchema = new Schema({
 
   questionSchema.plugin(passportLocalMongoose);
   questionSchema.plugin(findorcreate);
-
-
 
 
   const question = mongoose.model('Question', questionSchema);

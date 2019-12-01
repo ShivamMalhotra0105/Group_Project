@@ -12,7 +12,7 @@ var passport = require('passport');
 var flash = require('flash');
 
 //connection string mongodb
-mongoose.connect('mongodb+srv://portfolio:portfolio@cluster0-eqeqx.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://groupproject:groupproject@cluster0-ge8jq.mongodb.net/test?retryWrites=true&w=majority',
  {useNewUrlParser: true, useUnifiedTopology: true}
  );
 
@@ -21,7 +21,7 @@ mongoose.connect('mongodb+srv://portfolio:portfolio@cluster0-eqeqx.mongodb.net/t
  db.once('open', () => console.log("Connected to MongoDB"));
 
 
-
+var authRouter = require('./routes/auth')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -54,7 +54,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use((req, res, next) => {
-  res.locals.userLoggedIn = req.isAuthenticated();
+  res.locals.isLoggedIn = req.isAuthenticated();
   res.locals.user = req.user;
 
   if (req.isAuthenticated()) {
@@ -69,6 +69,7 @@ app.use((req, res, next) => {
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
