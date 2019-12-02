@@ -11,7 +11,7 @@ const passport = require('passport');
 
 //Get Login Page 
 router.get('/login', (req, res, next) => {
-  res.render('login', { error: req.flash('error') });
+  res.render('auth/login', { error: req.flash('error') });
 });
 
 // Post Login Page
@@ -26,7 +26,7 @@ router.post(
 
 // Get Registeration Page
 router.get('/register', (req, res, next) => {
-  res.render('register', {});
+  res.render('auth/register', {});
 });
 
 // Post Registeration Page

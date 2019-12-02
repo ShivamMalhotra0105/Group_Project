@@ -5,7 +5,7 @@
 
 var express = require('express');
 var router = express.Router();
-var Question = require('../models/question')
+var Question = require('../models/question');
 
 
 /* GET home page. */

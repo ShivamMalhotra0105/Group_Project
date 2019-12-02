@@ -1,9 +1,12 @@
+/* File Name: CSS DOCUMENT
+ Author Name: Shivam, Lovedeep, Egecan, Sukhpreet
+ Website Name: uSurvey
+ File Description: To Style the Website */
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  /*background-image: url('../images/pic1.jpg');*/
-  
-
+  background-image: url('../images/purple1.jpg');
 }
 
 a {
@@ -18,8 +21,11 @@ a {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #c0d1ed;
+  background-color: black;
   color: white;
   text-align: center;
 }
+
+
+
 

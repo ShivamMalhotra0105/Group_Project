@@ -27,8 +27,8 @@ mongoose.connect('mongodb+srv://portfolio:portfolio@cluster0-eqeqx.mongodb.net/p
  db.once('open', () => console.log("Connected to MongoDB"));
 
 // Three routers for the routes to work
-var authRouter = require('./routes/auth')
 var indexRouter = require('./routes/index');
+var authRouter = require('./routes/auth');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -77,6 +77,10 @@ app.use((req, res, next) => {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', authRouter);
+
+//Body-Parser
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

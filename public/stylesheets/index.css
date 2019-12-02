@@ -1,13 +1,22 @@
+/* File Name: CSS DOCUMENT
+ Author Name: Shivam, Lovedeep, Egecan, Sukhpreet
+ Website Name: uSurvey
+ File Description: To Style the Website */
+
+
+
 h1{
     padding: 20px;
-      color:#cc0000;
-      text-align:center;
+    color:#cc0000;
+    text-align:center;
     font: italic bold 50px/30px Georgia, serif;
   }
 
   p{
       text-align: center;
       font-weight: bolder;
+      font-size: 35px;
+      
   }
 
   button{

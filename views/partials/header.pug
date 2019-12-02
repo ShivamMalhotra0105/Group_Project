@@ -1,24 +1,29 @@
 //- File Name : Header.pug
 //- Author Name : Shivam, Egecan, Lovedeep, Sukhpreet
 //- Website Name: Usurvey
-//- File Description: Navigation Bar  of the site 
+//- File Description: Navigation Bar  of the site
+
 
 
 .navbar.navbar-inverse.navbar-fixed-top
   .container
     .navbar-header
-    a(class="navbar-brand", href="../")  Home
-    a(class="navbar-brand", href="../usurvey")  uSurvey
-    a(class="navbar-brand", href="../about")  About us
-    a(class="navbar-brand", href="../privacy")  Privacy
+    a(class="navbar-brand", href="../") 
+     i.material-icons  Home
+    a(class="navbar-brand", href="../usurvey")
+     i.material-icons  uSurvey
+    a(class="navbar-brand", href="../about")
+     i.material-icons  About us
+    a(class="navbar-brand", href="../privacy")
+      i.material-icons Privacy
     .navbar-collapse.collapse
       ul.nav.navbar-nav.navbar-right
-        if login
+        if isLoggedIn
           
           li
             a(href="/logout") Signout
         else
           li
-            a(href="/login") Sigin 
+            a(href="/login") Signin 
           li
             a(href="/register") Signup
