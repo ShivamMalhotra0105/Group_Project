@@ -31,16 +31,16 @@ router.get('/register', (req, res, next) => {
 
 // Post Registeration Page
 router.post('/register', (req, res, next) => {
+  const body = req.body;
   
   User.register(
-    new User({ username: req.body.username }),
+    new User({ username: req.body.username, email: req.body.email }),
     req.body.password,
-    req.body.email,
     function(err, account) {
       if (err) {
        
         console.log(err);
-        return res.render('register', { account: account });
+        return res.render('auth/register', { account: account });
       }
 
       passport.authenticate('local')(req, res, function() {
