@@ -1,0 +1,16 @@
+//-- File Name : Auth.js
+//-- Author Name : Shivam, Egecan, Lovedeep, Sukhpreet
+//-- Website Name: Usurvey
+//-- File Description: Authetication Routing File 
+extends ../layout
+
+block content
+	h1= title
+	link(rel='stylesheet', href='/stylesheets/usurvey.css')
+	form#survey-form(method='post')
+		input(type="text" value=article.title placeholder="Question1" name="title")
+		input(type="text" value=article.authors placeholder="Question2" name="authors")
+		textarea(type="text" placeholder="Your Comment" name="body")= article.body
+		input(type="date"  placeholder=" date" name="date")
+		
+		button(type="submit") Submit

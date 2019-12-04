@@ -40,6 +40,16 @@ router.get('/privacy', function(req, res, next) {
   res.render('privacy', {  });
 });
 
+/* GET register page. 
+router.get('/register', function(req, res, next) {
+  res.render('auth/register', { });
+});
+
+/* GET login page. 
+router.get('/login', function(req, res, next) {
+  res.render('auth/login', {  });
+});*/
+
 /* GET survey page. */
 router.get('/usurvey', function(req, res, next) {
   res.render('usurvey', { });

@@ -30,6 +30,7 @@ mongoose.connect('mongodb+srv://portfolio:portfolio@cluster0-eqeqx.mongodb.net/p
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
 var usersRouter = require('./routes/users');
+var articlesRouter = require('./routes/articles');
 
 var app = express();
 
@@ -77,6 +78,7 @@ app.use((req, res, next) => {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', authRouter);
+app.use('/articles', articlesRouter);
 
 //Body-Parser
 app.use(bodyParser.urlencoded({extended: false}));

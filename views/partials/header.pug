@@ -18,10 +18,12 @@
      i.material-icons  About us
     a(class="navbar-brand", href="../privacy")
       i.material-icons Privacy
+    
     .navbar-collapse.collapse
       ul.nav.navbar-nav.navbar-right
         if isLoggedIn
-          
+          li
+            a(href="articles/Create") Create Survey
           li
             a(href="/logout") Signout
         else

@@ -1,0 +1,16 @@
+//-- File Name : Auth.js
+//-- Author Name : Shivam, Egecan, Lovedeep, Sukhpreet
+//-- Website Name: Usurvey
+//-- File Description: Authetication Routing File 
+extends ../layout
+
+block content
+	a(href="/articles") Go Back
+	link(rel='stylesheet', href='/stylesheets/usurvey.css')
+	form(action=`/articles/${article._id}/delete`, method="post")
+		button(type="submit") Delete survey
+	a(href=`/articles/${article._id}/edit`) Edit survey
+	h1= article.title
+	h3= article.authors
+	p= article.body
+	
